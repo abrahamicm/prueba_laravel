@@ -1,0 +1,22 @@
+ return [
+            'producto_id' => $this->faker->numberBetween(1, 100),
+            'compra_id' => $this->faker->numberBetween(1, 50),
+            'cantidad' => $this->faker->numberBetween(1, 100),
+            'precio' => $this->faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL)
+        ];
+return [
+            'user_id' => $this->faker->numberBetween(1,100),
+            'subtotal' => $this->faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL),
+            'total' => $this->faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL),
+            'total_impuesto' => $this->faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL)
+
+        ];
+        User::factory(100)->create();
+        $this->call(ProductoSeeder::class);
+        $this->call(CompraSeeder::class);
+        $this->call(CompraDetalleSeeder::class);
+
+        public function run()
+    {
+        Compra::factory(100)->create();
+    }
