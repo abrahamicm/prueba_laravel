@@ -74,6 +74,7 @@
                 });
                 console.log(this.final)
                 this.output = JSON.stringify(this.final,undefined, 4)
+                this.final={}
             },
 
         }
